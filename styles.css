@@ -1,0 +1,517 @@
+@font-face {
+  font-family: ptsans;
+  src: url(./fonts/PTSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: ptb;
+  src: url(./fonts/PTSans-Bold.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  font-family: ptsans;
+  user-select: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+cover header {
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  background: #fff;
+  top: 0;
+}
+cover nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+cover nav hr {
+  position: absolute;
+  width: 95%;
+  height: 4px;
+  bottom: -4px;
+  background: #dddddd;
+  border: none;
+  border-radius: 10px;
+}
+cover nav h2 {
+  position: absolute;
+  left: 5%;
+  color: #276da6;
+  font-family: ptb;
+}
+
+cover nav ul {
+  display: flex;
+  position: absolute;
+  right: 5%;
+}
+
+cover nav ul li {
+  list-style: none;
+  margin: 5px;
+}
+cover nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #909090;
+}
+
+cover form {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+cover form h3, cover form p, cover form input {
+  position: absolute;
+  margin: 10px;
+}
+
+cover form h3 {
+  top: 5%;
+  font-weight: bolder;
+  color: #5c5c5c;
+}
+cover form .placeholder {
+  top: 22%;
+  left: 12%;
+  color: #909090;
+}
+cover form .text {
+  top: 30%;
+  width: 300px;
+  height: 30px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  padding: 5px;
+}
+color {
+  color: #276da6;
+}
+cover form .sp {
+  top: 45%;
+  width: 300px;
+  color: #5c5c5c;
+}
+
+cover form .submit {
+  top: 60%;
+  width: 250px;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  background-color: #2b78b6;
+  font-weight: bolder;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+cover form .submit:hover {
+  background-color: #3898e6;
+}
+
+cover span {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #2b78b6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 5%;
+  right: 5%;
+  cursor: pointer;
+}
+
+cover span img {
+  width: 30px;
+  filter: invert(100%);
+}
+
+
+.loader-container {
+  position: fixed;
+  display: flex;
+  background-color: #fff;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  align-items: center; 
+}
+
+@keyframes loader {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.off {
+  display: none;
+}
+.loader {
+  margin: auto;
+  transform: translate(-4em, -4em);
+}
+
+.loader::after, .loader::before {
+  animation: loader 2s linear infinite;
+  content: '';
+  border: 10px solid #1100ff;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border-radius: 50%;
+}
+.loader::after {
+  opacity: 0;
+  animation-delay: 1s;
+}
+
+/* --------------------------------------------------------------------------------- */
+
+
+.impress-on-step-1, .impress-on-step-2, .impress-on-step-3, .impress-on-step-4, .impress-on-step-5 {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.past {
+  transition: all 0.6s;
+  opacity: 0.2;
+}
+
+
+.slide {
+  width: 90vw;
+  height: 90vh;
+  background-color: #fff;
+}
+
+.n1 .slide header {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 0;
+  width: 90vw;
+  height: 10vh;
+  background-color: #fff;
+}
+
+.n1 .slide header nav ul {
+  display: flex;
+  position: absolute;
+  right: 5%;
+}
+
+.n1 .slide header nav ul li {
+  list-style: none;
+  margin: 5px;
+}
+.n1 .slide header nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #909090;
+}
+.n1 .slide header nav hr {
+  position: absolute;
+  width: 95%;
+  height: 4px;
+  bottom: -4px;
+  background: #dddddd;
+  border: none;
+  border-radius: 10px;
+  z-index: 100;
+}
+.n1 .slide header nav h1 {
+  position: absolute;
+  left: 5%;
+  color: #276da6;
+  font-family: ptb;
+}
+
+.n1 .slide aside {
+  position: absolute;
+  width: 25vw;
+  height: 80vh;
+  background-color: #f6f6f6;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.n1 .slide aside img {
+  width: 60px;
+  filter: invert(60%);
+}
+
+/* .n1 .slide aside hr {
+  position: absolute;
+  right: -4px;
+  border-radius: 10px;
+  bottom: 0;
+  width: 4px;
+  height: 80vh;
+  background-color: #dddddd;
+  border: none;
+  z-index: 100;
+} */
+
+.n1 .slide aside div {
+  width: 300px;
+  height: 500px;
+  border-radius: 10px;
+  background-color: #e9e9e9;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.n1 .slide aside div h2 {
+  position: relative;
+  top: 5%;
+  color: #242424;
+}
+.n1 .slide aside div p {
+  position: relative;
+  top: 10%;
+  text-align: justify;
+}
+.n1 .slide aside div img {
+  position: relative;
+  top: 70%;
+}
+
+.n1 .slide main {
+  position: absolute;
+  width: 65vw;
+  height: 80vh;
+  background-color: #fff;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.n1 .slide main div {
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+  background: #e9e9e9;
+  padding: 100px;
+  display: flex;
+  align-items: center;
+  text-align: justify;
+}
+
+
+/* -------------------------------------------------------- */
+
+.n2 .slide header {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 0;
+  width: 90vw;
+  height: 10vh;
+  background-color: #fff;
+}
+
+.n2 .slide header nav ul {
+  display: flex;
+  position: absolute;
+  right: 5%;
+}
+
+.n2 .slide header nav ul li {
+  list-style: none;
+  margin: 5px;
+}
+.n2 .slide header nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #909090;
+}
+.n2 .slide header nav hr {
+  position: absolute;
+  width: 95%;
+  height: 4px;
+  bottom: -4px;
+  background: #dddddd;
+  border: none;
+  border-radius: 10px;
+  z-index: 100;
+}
+.n2 .slide header nav h1 {
+  position: absolute;
+  left: 5%;
+  color: #276da6;
+  font-family: ptb;
+}
+
+.n2 .slide aside {
+  position: absolute;
+  width: 25vw;
+  height: 80vh;
+  background-color: #f6f6f6;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+.n2 .slide main {
+  position: absolute;
+  width: 65vw;
+  height: 80vh;
+  background-color: #fff;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.n2 .slide main header {
+  position: absolute;
+  width: 65vw;
+  height: 80px;
+  top: 4px;
+  background-color: #d5d5d5;
+  border: 5px solid #fff;
+  display: flex;
+  align-items: center;
+}
+.n2 .slide main header img {
+  width: 40px;
+}
+.n2 .slide main header .ellipsis {
+  position: absolute;
+  right: 2%;
+}
+.n2 .slide main header .search {
+  position: absolute;
+  right: 8%;
+}
+.n2 .slide main header .user {
+  position: absolute;
+  left: 2%;
+  background-color: white;
+  border-radius: 50%;
+}
+.n2 .slide main header h3 {
+  position: absolute;
+  left: 8%;
+}
+
+.globe {
+  position: absolute;
+  width: 300px;
+  height: 60px;
+  background-color: #3fcc4b;
+  top: var(--y);
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  text-align: justify;
+}
+.m {
+  right: 2%;
+}
+.y  {
+  left: 2%;
+  background-color: #4a4a4a;
+}
+
+.m span {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #3fcc4b;
+  clip-path: polygon(25% 25%, 75% 25%, 75% 25%, 25% 75%);
+  top: -10px;
+  right: -20px;
+}
+
+.y span {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #4a4a4a;
+  clip-path: polygon(25% 25%, 75% 25%, 75% 75%, 25% 25%);
+  top: -10px;
+  left: -20px;
+}
+.y p {
+  position: relative;
+  color: #fff;
+}
+
+.s3 .globe {
+  height: 90px;
+  margin: 10px;
+}
+.s4 .globe {
+  height: 90px;
+  margin: 10px;
+}
+
+.t {
+  background-color: #60c4b3;
+  left: 2%;
+}
+.t span {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #60c4b3;
+  clip-path: polygon(25% 25%, 75% 25%, 75% 75%, 25% 25%);
+  top: -10px;
+  left: -20px;
+}
